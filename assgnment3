@@ -1,0 +1,534 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Enter side 1: 5\n",
+      "Enter side 2: 4\n",
+      "Enter side 3: 9\n",
+      "0.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "import math\n",
+    "s1 = float(input(\"Enter side 1: \"))\n",
+    "s2 = float(input(\"Enter side 2: \"))\n",
+    "s3 = float(input(\"Enter side 3: \"))\n",
+    "s = float((s1+s2+s3)/2)\n",
+    "area = math.sqrt(s*(s-s1)*(s-s2)*(s-s3))\n",
+    "print(area)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Enter a string to test hohh\n",
+      "Not a palindrome string\n"
+     ]
+    }
+   ],
+   "source": [
+    "str_original = str(input(\"Enter a string to test \"))\n",
+    "str_reverse = str_original[::-1]\n",
+    "if str_original == str_reverse:\n",
+    "    print(\"Palindrome String\")\n",
+    "else:\n",
+    "    print(\"Not a palindrome string\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Enter the year to check2014\n",
+      "Not a leap year\n"
+     ]
+    }
+   ],
+   "source": [
+    "year = int(input(\"Enter the year to check\"))\n",
+    "if year%4==0:\n",
+    "    print(\"Leap Year\")\n",
+    "else:\n",
+    "    print(\"Not a leap year\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Enter the string This program converts spaces into hyphen\n",
+      "This-program-converts-spaces-into-hyphen\n"
+     ]
+    }
+   ],
+   "source": [
+    "str_ = str(input(\"Enter the string \"))\n",
+    "print(str_.replace(' ','-'))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Enter words seperated by commasorange, white, red, cyan, green, magenta, cyan, pink, white\n",
+      "[' cyan', ' green', ' magenta', ' pink', ' red', ' white', 'orange']\n"
+     ]
+    }
+   ],
+   "source": [
+    "str_total = str(input(\"Enter words seperated by commas\"))\n",
+    "str_lis = str_total.split(\",\")\n",
+    "str_lis = list(dict.fromkeys(str_lis))\n",
+    "list_2 = sorted(str_lis)\n",
+    "print(list_2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Enter income780000\n",
+      "Tax to be paid is 117000.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "inc = int(input(\"Enter income\"))\n",
+    "if inc<250000:\n",
+    "    print(\"No Tax\")\n",
+    "elif inc <= 500000:\n",
+    "    print(\"Tax to be paid is\",inc/20)\n",
+    "elif inc <= 750000:\n",
+    "    print(\"Tax to be paid is\",inc/10)\n",
+    "elif inc <= 1000000:\n",
+    "    print(\"Tax to be paid is\",inc*3/20)\n",
+    "elif inc <= 1250000:\n",
+    "    print(\"Tax to be paid is\",inc/5)\n",
+    "elif inc <= 1500000:\n",
+    "    print(\"Tax to be paid is\",inc/4)\n",
+    "else:\n",
+    "    print(\"Tax to be paid is\",3*inc/10)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Enter number47\n",
+      "Enter number58\n",
+      "Enter number96\n",
+      "['47', '58', '96']\n",
+      "475896\n"
+     ]
+    }
+   ],
+   "source": [
+    "lis = []\n",
+    "num = str()\n",
+    "for i in range(0,3):\n",
+    "    x = str(input(\"Enter number\"))\n",
+    "    lis.append(x)\n",
+    "print(lis)\n",
+    "for i in range(0,3):\n",
+    "    num += lis[i]\n",
+    "print(int(num))\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Enter days4\n",
+      "Enter hours2\n",
+      "Enter minutes34\n",
+      "Enter seconds47\n",
+      "354887 seconds\n"
+     ]
+    }
+   ],
+   "source": [
+    "days = int(input(\"Enter days \"))\n",
+    "hours = int(input(\"Enter hours \"))\n",
+    "mini = int(input(\"Enter minutes \"))\n",
+    "sec = int(input(\"Enter seconds \"))\n",
+    "sec_total = days*24*60*60 + hours*60*60 + mini*60 + sec\n",
+    "print(sec_total,'seconds')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Enter number 4\n",
+      "Enter number 5\n",
+      "Enter number 6\n",
+      "Minimum value is 4 Max value is 6\n"
+     ]
+    }
+   ],
+   "source": [
+    "lis = []\n",
+    "for i in range(0,3):\n",
+    "    x = int(input(\"Enter number \"))\n",
+    "    lis.append(x)\n",
+    "print(\"Minimum value is {0} Max value is {1}\".format(min(lis),max(lis)))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Enter date in yyyy-mm-dd format1998-5-6\n",
+      "['1998', '5', '6']\n",
+      "Next day is 1998-5-7\n"
+     ]
+    }
+   ],
+   "source": [
+    "import sys\n",
+    "total_date = str(input(\"Enter date in yyyy-mm-dd format\"))\n",
+    "lis = total_date.split('-')\n",
+    "y=int(lis[0])\n",
+    "m=int(lis[1])\n",
+    "d=int(lis[2])\n",
+    "print(lis)\n",
+    "if d <= 31 and m <= 12:\n",
+    "    if m%2==0:\n",
+    "        print(\"Date no exist\")\n",
+    "    else:\n",
+    "        if d==31 and m%2!=0:\n",
+    "            print(\"Next day is {0}-{1}-{2}\".format(y,m+1,1))\n",
+    "        elif d==30 and m%2==0:\n",
+    "            print(\"Next day is {0}-{1}-{2}\".format(y,m+1,1))\n",
+    "        elif d==28 and m==2:\n",
+    "            print(\"Next day is {0}--{1}-{2}\".format(y,m+1,1))\n",
+    "        else:\n",
+    "            print(\"Next day is {0}-{1}-{2}\".format(y,m,d+1))\n",
+    "elif m==2 and d >28:\n",
+    "    print(\"Date not exist\")\n",
+    "else:\n",
+    "    print(\"Date not exist\")\n",
+    "    \n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Enter number of elements 4\n",
+      "Enter number 1\n",
+      "Enter number 2\n",
+      "Enter number 7\n",
+      "Enter number 8\n",
+      "112\n"
+     ]
+    }
+   ],
+   "source": [
+    "lis = []\n",
+    "prod = 1\n",
+    "n = int(input(\"Enter number of elements \"))\n",
+    "for i in range(0,n):\n",
+    "    x = int(input(\"Enter number \"))\n",
+    "    lis.append(x)\n",
+    "for i in range(0,n):\n",
+    "    prod = prod*lis[i]\n",
+    "print(prod)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Enter number of elements5\n",
+      "Enter number1\n",
+      "Enter number7\n",
+      "Enter number8\n",
+      "Enter number9\n",
+      "Enter number78\n",
+      "[8, 15, 17, 87]\n"
+     ]
+    }
+   ],
+   "source": [
+    "input_list = []\n",
+    "out_list = []\n",
+    "n = int(input(\"Enter number of elements\"))\n",
+    "for i in range(0,n):\n",
+    "    x = int(input(\"Enter number\"))\n",
+    "    input_list.append(x)\n",
+    "for i in range(1,len(input_list)):\n",
+    "    out_list.append(input_list[i] + input_list[i-1])\n",
+    "print(out_list)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 31,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Enter number of elements3\n",
+      "Enter number 5\n",
+      "Enter number 6\n",
+      "Enter number 7\n",
+      "(5, 6, 7)\n",
+      "[5, 30, 210]\n"
+     ]
+    }
+   ],
+   "source": [
+    "input_list = []\n",
+    "out_list = []\n",
+    "n  = int(input(\"Enter number of elements\"))\n",
+    "for i in range(0,n):\n",
+    "    x = int(input(\"Enter number \"))\n",
+    "    input_list.append(x)\n",
+    "tupl = tuple(input_list)\n",
+    "print(tupl)\n",
+    "y = 1\n",
+    "for i in range(0,len(tupl)):\n",
+    "    y = y*tupl[i]\n",
+    "    out_list.append(y)\n",
+    "    \n",
+    "print(out_list)\n",
+    "    \n",
+    "            "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 34,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Enter a number 7456\n",
+      "['7', '4', '5', '6']\n"
+     ]
+    }
+   ],
+   "source": [
+    "num = int(input(\"Enter a number \"))\n",
+    "lis = []\n",
+    "while(num>0):\n",
+    "    rem = num%10\n",
+    "    lis.append(str(rem))\n",
+    "    num = num//10\n",
+    "lis.reverse()\n",
+    "print(lis)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Enter a string hithisisracecar\n",
+      "racecar\n"
+     ]
+    }
+   ],
+   "source": [
+    "string = str(input(\"Enter a string \"))\n",
+    "list1 = []\n",
+    "list2 = []\n",
+    "ind = 0\n",
+    "for i in range(0,len(string)-1):\n",
+    "    for j in range(i+1,len(string)+1):\n",
+    "        if j-i>1:\n",
+    "            new_str = string[i:j]\n",
+    "            if new_str == new_str[::-1]:\n",
+    "                list1.append(string[i:j])\n",
+    "                list2.append(len(string[i:j]))\n",
+    "max_substr = max(list2)\n",
+    "for i in list2:\n",
+    "    if i == max_substr:\n",
+    "        print(list1[ind])\n",
+    "    else:\n",
+    "        ind += 1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Enter a binary Number of 10 digits1110111011 \n",
+      "Enter a binary Number of 5 digits10011\n",
+      "0\n"
+     ]
+    }
+   ],
+   "source": [
+    "bin_10=input('Enter a binary Number of 10 digits')\n",
+    "bin_5=input('Enter a binary Number of 5 digits')\n",
+    "def substring(a,b):\n",
+    "    for i in range(0,10):\n",
+    "        for j in range(i+1,11):\n",
+    "            c=a[i:j]\n",
+    "            if c==b:\n",
+    "                return 1\n",
+    "res = substring(bin_10,bin_5)\n",
+    "if res==1:\n",
+    "    print('1')\n",
+    "else:\n",
+    "    print('0')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Enter number of times to repeat: 1\n",
+      "Enter capacity of vessel A: 2\n",
+      "Enter capacity of vessel B: 5\n",
+      "Enter required water: 3\n",
+      "2\n"
+     ]
+    }
+   ],
+   "source": [
+    "def check(a,b,c):\n",
+    "    i=0\n",
+    "    vsl1=0\n",
+    "    vsl2=0\n",
+    "    while vsl1!=c and vsl2!=c:\n",
+    "        if vsl2==0: \n",
+    "            vsl2=b \n",
+    "            i+=1\n",
+    "        if vsl1 == a: \n",
+    "            vsl1 = 0\n",
+    "            i+=1\n",
+    "        if vsl2<a-vsl1:\n",
+    "            temp=vsl2\n",
+    "        else:\n",
+    "            temp=a-vsl1\n",
+    "        vsl1+=temp\n",
+    "        vsl2-=temp\n",
+    "        i+=1\n",
+    "    return i\n",
+    "        \n",
+    "n=int(input('Enter number of times to repeat: '))\n",
+    "for x in range(0,n):\n",
+    "    a=int(input('Enter capacity of vessel A: '))\n",
+    "    b=int(input('Enter capacity of vessel B: '))\n",
+    "    c=int(input('Enter required water: '))\n",
+    "    if a<c and b<c:\n",
+    "        res=-1\n",
+    "    else:\n",
+    "        if check(a,b,c)<check(b,a,c):\n",
+    "            res=check(a,b,c)\n",
+    "        else:\n",
+    "            res=check(b,a,c)\n",
+    "    print(res)"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.6"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}
